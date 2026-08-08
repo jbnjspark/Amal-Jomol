@@ -3,8 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Amal &amp; Jomol — Save The Date</title>
-  <meta property="og:type" content="website">
+
+<!-- Social / URL Preview -->
+<meta property="og:type" content="website">
 <meta property="og:title" content="Amal & Jomol — Save The Date">
 <meta property="og:description" content="You are special to us, and we warmly invite you to share in our joy.">
 <meta property="og:image" content="https://jbnjspark.github.io/Amal-Jomol/DSC08390-web.jpg">
@@ -14,39 +17,54 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Amal & Jomol — Save The Date">
 <meta name="twitter:description" content="You are special to us, and we warmly invite you to share in our joy.">
-<meta name="twitter:image" content="https://jbnjspark.github.io/Amal-Jomol/DSC08221-web.jpg">
+<meta name="twitter:image" content="https://jbnjspark.github.io/Amal-Jomol/DSC08390-web.jpg">
+
+<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+
 <style>
+
   :root{
     /* Lighter, Romantic Color Palette */
-    --bg-light: #FDFBF9;      /* Very soft warm white */
-    --bg-soft: #F9F4F2;       /* Soft blush cream */
-    --dusty-rose: #B57B85;    /* Romantic pink/rose */
+    --bg-light: #FDFBF9;
+    --bg-soft: #F9F4F2;
+    --dusty-rose: #B57B85;
     --dusty-rose-dark: #9A5B66;
-    --gold: #C5AC8E;          /* Soft champagne gold */
+    --gold: #C5AC8E;
     --gold-light: #D9C8B0;
-    --sage: #A2B29F;          /* Soft romantic green */
+    --sage: #A2B29F;
     --sage-light: #C4D1C2;
-    --text-dark: #5C4D4D;     /* Softer than pure black/charcoal */
-    --text-muted: #8C7C7C;    /* Gentle grey-brown */
+    --text-dark: #5C4D4D;
+    --text-muted: #8C7C7C;
   }
 
-  *{box-sizing:border-box;margin:0;padding:0;}
+  *{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+  }
 
-  html{scroll-behavior:smooth;}
+  html{
+    scroll-behavior:smooth;
+  }
 
   body{
     background:var(--bg-light);
     color:var(--text-dark);
     font-family:'Cormorant Garamond', serif;
     overflow-x:hidden;
-    position: relative;
+    position:relative;
   }
 
   @media (prefers-reduced-motion: reduce){
-    *{animation:none !important; transition:none !important; scroll-behavior:auto !important;}
+    *{
+      animation:none !important;
+      transition:none !important;
+      scroll-behavior:auto !important;
+    }
   }
 
   .eyebrow{
@@ -58,47 +76,80 @@
   }
 
   /* ---------- dynamic background texture & leaves ---------- */
+
   .bg-texture{
-    position:fixed; inset:0; z-index:-1; pointer-events:none;
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    pointer-events:none;
+
     background-image:
-      radial-gradient(circle at 10% 20%, rgba(197,172,142,0.1), transparent 40%),
-      radial-gradient(circle at 90% 80%, rgba(181,123,133,0.08), transparent 45%);
+      radial-gradient(
+        circle at 10% 20%,
+        rgba(197,172,142,0.1),
+        transparent 40%
+      ),
+      radial-gradient(
+        circle at 90% 80%,
+        rgba(181,123,133,0.08),
+        transparent 45%
+      );
   }
 
-  #falling-leaves-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none;
-    z-index: 0;
-    overflow: hidden;
+  #falling-leaves-container{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    pointer-events:none;
+    z-index:0;
+    overflow:hidden;
   }
 
-  .leaf-anim {
-    position: absolute;
-    top: -10%;
-    opacity: 0;
-    animation-name: fall, sway;
-    animation-timing-function: linear, ease-in-out;
-    animation-iteration-count: infinite, infinite;
-    animation-direction: normal, alternate;
+  .leaf-anim{
+    position:absolute;
+    top:-10%;
+    opacity:0;
+
+    animation-name:fall, sway;
+    animation-timing-function:linear, ease-in-out;
+    animation-iteration-count:infinite, infinite;
+    animation-direction:normal, alternate;
   }
 
-  @keyframes fall {
-    0% { top: -10%; opacity: 0; }
-    10% { opacity: 0.6; }
-    90% { opacity: 0.6; }
-    100% { top: 110%; opacity: 0; }
+  @keyframes fall{
+    0%{
+      top:-10%;
+      opacity:0;
+    }
+
+    10%{
+      opacity:0.6;
+    }
+
+    90%{
+      opacity:0.6;
+    }
+
+    100%{
+      top:110%;
+      opacity:0;
+    }
   }
 
-  @keyframes sway {
-    0% { transform: translateX(-25px) rotate(-20deg); }
-    100% { transform: translateX(25px) rotate(20deg); }
+  @keyframes sway{
+    0%{
+      transform:translateX(-25px) rotate(-20deg);
+    }
+
+    100%{
+      transform:translateX(25px) rotate(20deg);
+    }
   }
 
   /* ---------- hero ---------- */
+
   .hero{
     min-height:100svh;
     display:flex;
@@ -108,29 +159,44 @@
     text-align:center;
     padding:8vh 6vw 6vh;
     position:relative;
-    z-index: 1;
+    z-index:1;
   }
 
-  .hero .eyebrow{opacity:0; animation:fadeUp 1s ease forwards 0.2s;}
+  .hero .eyebrow{
+    opacity:0;
+    animation:fadeUp 1s ease forwards 0.2s;
+  }
+
+  /* Main Names */
 
   .names{
-    font-family:'Great Vibes', cursive;
+    font-family:'Bodoni Moda', serif;
     font-weight:400;
     color:var(--dusty-rose-dark);
     line-height:1.05;
     font-size:clamp(3.5rem, 14vw, 8rem);
     margin-top:0.6rem;
-    opacity:0; animation:fadeUp 1.1s ease forwards 0.5s;
-    text-shadow: 2px 2px 8px rgba(181,123,133,0.15);
+    opacity:0;
+    animation:fadeUp 1.1s ease forwards 0.5s;
+    text-shadow:2px 2px 8px rgba(181,123,133,0.15);
   }
 
   .heart-glyph{
-    width:48px; height:48px;
+    width:48px;
+    height:48px;
     margin:0.8rem auto 0.4rem;
-    opacity:0; 
-    animation:fadeUp 1s ease forwards 0.9s, pulseHeart 2.5s ease-in-out infinite 1.5s;
+    opacity:0;
+
+    animation:
+      fadeUp 1s ease forwards 0.9s,
+      pulseHeart 2.5s ease-in-out infinite 1.5s;
   }
-  .heart-glyph svg{width:100%;height:100%;display:block;}
+
+  .heart-glyph svg{
+    width:100%;
+    height:100%;
+    display:block;
+  }
 
   .tagline{
     font-family:'Cinzel', serif;
@@ -139,29 +205,71 @@
     color:var(--text-muted);
     text-transform:uppercase;
     margin-top:0.8rem;
-    opacity:0; animation:fadeUp 1s ease forwards 1.2s;
+    opacity:0;
+
+    animation:fadeUp 1s ease forwards 1.2s;
   }
 
   .hairline-heart{
-    display:flex; align-items:center; gap:0.9rem;
+    display:flex;
+    align-items:center;
+    gap:0.9rem;
     width:min(340px, 70vw);
     margin:2.2rem auto 0;
-    opacity:0; animation:fadeUp 1s ease forwards 1.5s;
+    opacity:0;
+
+    animation:fadeUp 1s ease forwards 1.5s;
   }
-  .hairline-heart .line{flex:1; height:1px; background:linear-gradient(90deg, transparent, var(--gold-light));}
-  .hairline-heart .line.right{background:linear-gradient(90deg, var(--gold-light), transparent);}
-  .hairline-heart svg{width:16px;height:16px;flex-shrink:0;}
-  .hairline-heart .leaf{width:22px;height:22px;flex-shrink:0;}
-  .hairline-heart .leaf.flip{transform:scaleX(-1);}
+
+  .hairline-heart .line{
+    flex:1;
+    height:1px;
+    background:linear-gradient(
+      90deg,
+      transparent,
+      var(--gold-light)
+    );
+  }
+
+  .hairline-heart .line.right{
+    background:linear-gradient(
+      90deg,
+      var(--gold-light),
+      transparent
+    );
+  }
+
+  .hairline-heart svg{
+    width:16px;
+    height:16px;
+    flex-shrink:0;
+  }
+
+  .hairline-heart .leaf{
+    width:22px;
+    height:22px;
+    flex-shrink:0;
+  }
+
+  .hairline-heart .leaf.flip{
+    transform:scaleX(-1);
+  }
 
   /* ---------- countdown ---------- */
+
   .countdown{
     margin-top:2.8rem;
     display:flex;
     gap:clamp(1.2rem, 5vw, 2.8rem);
-    opacity:0; animation:fadeUp 1s ease forwards 1.8s;
+    opacity:0;
+
+    animation:fadeUp 1s ease forwards 1.8s;
   }
-  .countdown .unit{text-align:center;}
+
+  .countdown .unit{
+    text-align:center;
+  }
+
   .countdown .num{
     font-family:'Cormorant Garamond', serif;
     font-weight:500;
@@ -170,6 +278,7 @@
     line-height:1;
     font-variant-numeric:tabular-nums;
   }
+
   .countdown .lbl{
     font-family:'Cinzel', serif;
     font-size:0.65rem;
@@ -180,84 +289,164 @@
   }
 
   .scroll-cue{
-    position:absolute; bottom:6vh; left:50%; transform:translateX(-50%);
-    font-family:'Cinzel', serif; font-size:0.65rem; letter-spacing:0.2em;
-    color:var(--gold); text-transform:uppercase;
-    opacity:0; animation:fadeUp 1s ease forwards 2.2s, bob 2.4s ease-in-out infinite 3.2s;
+    position:absolute;
+    bottom:6vh;
+    left:50%;
+    transform:translateX(-50%);
+
+    font-family:'Cinzel', serif;
+    font-size:0.65rem;
+    letter-spacing:0.2em;
+    color:var(--gold);
+    text-transform:uppercase;
+
+    opacity:0;
+
+    animation:
+      fadeUp 1s ease forwards 2.2s,
+      bob 2.4s ease-in-out infinite 3.2s;
   }
 
   @keyframes fadeUp{
-    from{opacity:0; transform:translateY(16px);}
-    to{opacity:1; transform:translateY(0);}
+    from{
+      opacity:0;
+      transform:translateY(16px);
+    }
+
+    to{
+      opacity:1;
+      transform:translateY(0);
+    }
   }
+
   @keyframes bob{
-    0%,100%{transform:translate(-50%,0);}
-    50%{transform:translate(-50%,6px);}
+    0%,100%{
+      transform:translate(-50%,0);
+    }
+
+    50%{
+      transform:translate(-50%,6px);
+    }
   }
+
   @keyframes pulseHeart{
-    0%,100%{transform:scale(1);}
-    50%{transform:scale(1.08);}
+    0%,100%{
+      transform:scale(1);
+    }
+
+    50%{
+      transform:scale(1.08);
+    }
   }
 
   /* ---------- section shell ---------- */
+
   section{
     padding:7rem 6vw;
     max-width:1050px;
     margin:0 auto;
-    position: relative;
-    z-index: 1;
+    position:relative;
+    z-index:1;
   }
 
   .section-head{
     text-align:center;
     margin-bottom:3.5rem;
   }
-  .section-head .eyebrow{display:block; margin-bottom:0.8rem;}
+
+  .section-head .eyebrow{
+    display:block;
+    margin-bottom:0.8rem;
+  }
+
   .section-head h2{
     font-family:'Great Vibes', cursive;
     font-weight:400;
     font-size:clamp(2.6rem, 7vw, 4rem);
     color:var(--dusty-rose-dark);
   }
+
   .section-head .sprig-row{
-    display:flex; align-items:center; justify-content:center; gap:0.8rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:0.8rem;
     margin-top:1rem;
   }
-  .section-head .sprig-row svg{width:45px; height:18px;}
-  .section-head .sprig-row .r{transform:scaleX(-1);}
 
-  .reveal{opacity:0; transform:translateY(24px); transition:opacity 0.9s ease, transform 0.9s ease;}
-  .reveal.in{opacity:1; transform:translateY(0);}
+  .section-head .sprig-row svg{
+    width:45px;
+    height:18px;
+  }
+
+  .section-head .sprig-row .r{
+    transform:scaleX(-1);
+  }
+
+  .reveal{
+    opacity:0;
+    transform:translateY(24px);
+    transition:
+      opacity 0.9s ease,
+      transform 0.9s ease;
+  }
+
+  .reveal.in{
+    opacity:1;
+    transform:translateY(0);
+  }
 
   /* ---------- events ---------- */
+
   .events{
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:2.5rem;
   }
-  @media (max-width:768px){ .events{grid-template-columns:1fr;} }
+
+  @media (max-width:768px){
+    .events{
+      grid-template-columns:1fr;
+    }
+  }
 
   .event-card{
     background:var(--bg-soft);
     border:1px solid rgba(197,172,142,0.3);
-    border-radius: 12px;
+    border-radius:12px;
     padding:3.2rem 2.5rem;
     text-align:center;
     position:relative;
-    box-shadow: 0 10px 30px -10px rgba(181,123,133,0.1);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+    box-shadow:
+      0 10px 30px -10px rgba(181,123,133,0.1);
+
+    transition:
+      transform 0.4s ease,
+      box-shadow 0.4s ease;
   }
-  .event-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 15px 40px -10px rgba(181,123,133,0.2);
+
+  .event-card:hover{
+    transform:translateY(-6px);
+
+    box-shadow:
+      0 15px 40px -10px rgba(181,123,133,0.2);
   }
+
   .event-card::before{
     content:'';
-    position:absolute; top:12px; left:12px; right:12px; bottom:12px;
+    position:absolute;
+    top:12px;
+    left:12px;
+    right:12px;
+    bottom:12px;
+
     border:1px solid rgba(197,172,142,0.25);
-    border-radius: 8px;
+    border-radius:8px;
+
     pointer-events:none;
   }
+
   .event-card .kind{
     font-family:'Cinzel', serif;
     letter-spacing:0.25em;
@@ -267,11 +456,13 @@
   }
 
   /* ---------- guest quote ---------- */
+
   .guest-quote{
     text-align:center;
     padding-top:6rem;
     padding-bottom:6rem;
   }
+
   .guest-quote .quote-mark{
     font-family:'Great Vibes', cursive;
     font-size:4.5rem;
@@ -279,6 +470,7 @@
     line-height:1;
     display:block;
   }
+
   .guest-quote .quote-text{
     font-family:'Cormorant Garamond', serif;
     font-style:italic;
@@ -298,6 +490,7 @@
     margin:0.8rem 0 0.2rem;
     line-height:1;
   }
+
   .event-card .date-sub{
     font-family:'Cinzel', serif;
     font-size:0.8rem;
@@ -305,25 +498,32 @@
     color:var(--text-muted);
     text-transform:uppercase;
   }
+
   .event-card .venue-name{
     margin-top:1.6rem;
     font-size:1.3rem;
-    font-weight: 500;
+    font-weight:500;
     color:var(--text-dark);
   }
+
   .event-card .venue-addr{
     margin-top:0.4rem;
     font-size:1.1rem;
     color:var(--text-muted);
     line-height:1.5;
   }
+
   .countdown-mini{
     margin-top:1.8rem;
     display:flex;
     justify-content:center;
     gap:1.2rem;
   }
-  .countdown-mini .unit{text-align:center;}
+
+  .countdown-mini .unit{
+    text-align:center;
+  }
+
   .countdown-mini .num{
     font-family:'Cormorant Garamond', serif;
     font-weight:500;
@@ -332,6 +532,7 @@
     line-height:1;
     font-variant-numeric:tabular-nums;
   }
+
   .countdown-mini .lbl{
     font-family:'Cinzel', serif;
     font-size:0.58rem;
@@ -352,14 +553,23 @@
     text-decoration:none;
     border-bottom:1px solid var(--dusty-rose-dark);
     padding-bottom:4px;
-    transition:opacity 0.2s ease, border-color 0.2s ease;
+
+    transition:
+      opacity 0.2s ease,
+      border-color 0.2s ease;
   }
-  .map-btn:hover{opacity:0.7; border-color:transparent;}
+
+  .map-btn:hover{
+    opacity:0.7;
+    border-color:transparent;
+  }
 
   /* ---------- music ---------- */
+
   .music{
     text-align:center;
   }
+
   .music p{
     font-size:1.3rem;
     color:var(--text-muted);
@@ -367,30 +577,71 @@
     margin:0 auto 2.5rem;
     line-height:1.65;
   }
+
   .music-btn{
     display:inline-flex;
     align-items:center;
     gap:0.8rem;
-    background:linear-gradient(135deg, var(--dusty-rose-dark), var(--dusty-rose));
+
+    background:
+      linear-gradient(
+        135deg,
+        var(--dusty-rose-dark),
+        var(--dusty-rose)
+      );
+
     color:#fff;
     font-family:'Cinzel', serif;
     font-size:0.75rem;
     letter-spacing:0.18em;
     text-transform:uppercase;
     text-decoration:none;
+
     padding:1.1rem 2.4rem;
     border-radius:999px;
-    box-shadow:0 8px 24px rgba(181,123,133,0.3);
-    transition:transform 0.3s ease, box-shadow 0.3s ease;
+
+    box-shadow:
+      0 8px 24px rgba(181,123,133,0.3);
+
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
   }
-  .music-btn:hover{transform:translateY(-3px); box-shadow:0 12px 30px rgba(181,123,133,0.4);}
+
+  .music-btn:hover{
+    transform:translateY(-3px);
+
+    box-shadow:
+      0 12px 30px rgba(181,123,133,0.4);
+  }
+
   .music-btn .note-icon{
-    width:26px; height:26px; flex-shrink:0;
-    display:flex; align-items:center; justify-content:center;
+    width:26px;
+    height:26px;
+    flex-shrink:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
   }
-  .music-btn .note-icon svg{width:16px;height:16px;}
-  .music-btn .btn-label{display:flex; flex-direction:column; align-items:flex-start; line-height:1.4;}
-  .music-btn .btn-label .small{font-size:0.6rem; opacity:0.9; letter-spacing:0.14em;}
+
+  .music-btn .note-icon svg{
+    width:16px;
+    height:16px;
+  }
+
+  .music-btn .btn-label{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    line-height:1.4;
+  }
+
+  .music-btn .btn-label .small{
+    font-size:0.6rem;
+    opacity:0.9;
+    letter-spacing:0.14em;
+  }
+
   .music-caption{
     margin-top:1.2rem;
     font-family:'Cinzel', serif;
@@ -401,53 +652,83 @@
   }
 
   /* ---------- gallery ---------- */
+
   .gallery-grid{
     display:grid;
     grid-template-columns:repeat(3, 1fr);
     gap:1.2rem;
     margin-bottom:3.5rem;
   }
-  @media (max-width:640px){ .gallery-grid{grid-template-columns:1fr;} }
+
+  @media (max-width:640px){
+    .gallery-grid{
+      grid-template-columns:1fr;
+    }
+  }
+
   .gallery-item{
     aspect-ratio:4/5;
     overflow:hidden;
     border:1px solid var(--dusty-rose);
-    border-radius: 8px;
-    box-shadow:0 0 0 6px var(--bg-light), 0 0 0 7px rgba(181,123,133,0.2);
+    border-radius:8px;
+
+    box-shadow:
+      0 0 0 6px var(--bg-light),
+      0 0 0 7px rgba(181,123,133,0.2);
   }
+
   .gallery-item img{
-    width:100%; height:100%;
+    width:100%;
+    height:100%;
     object-fit:cover;
     display:block;
     filter:saturate(1.05) contrast(0.95);
   }
+
   .gallery-btn{
     display:inline-flex;
     align-items:center;
     gap:0.8rem;
+
     background:var(--text-dark);
     color:var(--bg-light);
+
     font-family:'Cinzel', serif;
     font-size:0.75rem;
     letter-spacing:0.18em;
     text-transform:uppercase;
     text-decoration:none;
+
     padding:1.1rem 2.4rem;
     border-radius:999px;
-    transition:transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+
+    transition:
+      transform 0.3s ease,
+      background 0.3s ease,
+      box-shadow 0.3s ease;
   }
+
   .gallery-btn:hover{
-    background:var(--text-muted); 
+    background:var(--text-muted);
     transform:translateY(-3px);
-    box-shadow:0 10px 25px rgba(92,77,77,0.2);
+
+    box-shadow:
+      0 10px 25px rgba(92,77,77,0.2);
   }
-  .gallery-btn svg{width:18px;height:18px;flex-shrink:0;}
+
+  .gallery-btn svg{
+    width:18px;
+    height:18px;
+    flex-shrink:0;
+  }
 
   /* ---------- closing caption ---------- */
+
   .closing-caption{
     text-align:center;
     padding:0 6vw;
   }
+
   .closing-caption p{
     font-family:'Cormorant Garamond', serif;
     font-style:italic;
@@ -459,13 +740,21 @@
   }
 
   /* ---------- footer ---------- */
+
   footer{
     text-align:center;
     padding:6rem 6vw 5rem;
-    position: relative;
-    z-index: 1;
+    position:relative;
+    z-index:1;
   }
-  footer .heart-glyph{width:36px;height:36px;margin-bottom:1.2rem; animation: pulseHeart 3s ease-in-out infinite;}
+
+  footer .heart-glyph{
+    width:36px;
+    height:36px;
+    margin-bottom:1.2rem;
+    animation:pulseHeart 3s ease-in-out infinite;
+  }
+
   footer p{
     font-family:'Cinzel', serif;
     font-size:0.55rem;
@@ -473,222 +762,668 @@
     text-transform:uppercase;
     color:var(--text-muted);
   }
+
 </style>
 </head>
+
 <body>
 
 <div class="bg-texture"></div>
+
 <!-- Container for dynamic falling leaves -->
 <div id="falling-leaves-container"></div>
 
 <!-- HERO -->
+
 <section class="hero" style="min-height:100svh;">
+
   <span class="eyebrow">Save The Date</span>
+
   <h1 class="names">Amal &amp; Jomol</h1>
+
   <div class="heart-glyph">
-    <svg viewBox="0 0 100 100" fill="none" stroke="var(--dusty-rose-dark)" stroke-width="3">
+    <svg
+      viewBox="0 0 100 100"
+      fill="none"
+      stroke="var(--dusty-rose-dark)"
+      stroke-width="3"
+    >
       <path d="M50 82 C20 60, 8 40, 22 24 C32 12, 48 16, 50 32 C52 16, 68 12, 78 24 C92 40, 80 60, 50 82 Z"/>
     </svg>
   </div>
+
   <p class="tagline">Are Getting Married</p>
 
   <div class="hairline-heart">
+
     <span class="line"></span>
-    <svg class="leaf" viewBox="0 0 60 24" fill="none" stroke="var(--sage)" stroke-width="2"><path d="M2 12 C 18 2, 34 2, 46 12 C 34 8, 18 8, 2 12 Z"/><path d="M2 12 C 18 22, 34 22, 46 12 C 34 16, 18 16, 2 12 Z"/><line x1="2" y1="12" x2="52" y2="12"/></svg>
-    <svg viewBox="0 0 100 100" fill="none" stroke="var(--gold)" stroke-width="5"><path d="M50 82 C20 60, 8 40, 22 24 C32 12, 48 16, 50 32 C52 16, 68 12, 78 24 C92 40, 80 60, 50 82 Z"/></svg>
-    <svg class="leaf flip" viewBox="0 0 60 24" fill="none" stroke="var(--sage)" stroke-width="2"><path d="M2 12 C 18 2, 34 2, 46 12 C 34 8, 18 8, 2 12 Z"/><path d="M2 12 C 18 22, 34 22, 46 12 C 34 16, 18 16, 2 12 Z"/><line x1="2" y1="12" x2="52" y2="12"/></svg>
+
+    <svg
+      class="leaf"
+      viewBox="0 0 60 24"
+      fill="none"
+      stroke="var(--sage)"
+      stroke-width="2"
+    >
+      <path d="M2 12 C 18 2, 34 2, 46 12 C 34 8, 18 8, 2 12 Z"/>
+      <path d="M2 12 C 18 22, 34 22, 46 12 C 34 16, 18 16, 2 12 Z"/>
+      <line x1="2" y1="12" x2="52" y2="12"/>
+    </svg>
+
+    <svg
+      viewBox="0 0 100 100"
+      fill="none"
+      stroke="var(--gold)"
+      stroke-width="5"
+    >
+      <path d="M50 82 C20 60, 8 40, 22 24 C32 12, 48 16, 50 32 C52 16, 68 12, 78 24 C92 40, 80 60, 50 82 Z"/>
+    </svg>
+
+    <svg
+      class="leaf flip"
+      viewBox="0 0 60 24"
+      fill="none"
+      stroke="var(--sage)"
+      stroke-width="2"
+    >
+      <path d="M2 12 C 18 2, 34 2, 46 12 C 34 8, 18 8, 2 12 Z"/>
+      <path d="M2 12 C 18 22, 34 22, 46 12 C 34 16, 18 16, 2 12 Z"/>
+      <line x1="2" y1="12" x2="52" y2="12"/>
+    </svg>
+
     <span class="line right"></span>
+
   </div>
 
   <div class="countdown" id="countdown">
-    <div class="unit"><div class="num" id="cd-days">--</div><div class="lbl">Days</div></div>
-    <div class="unit"><div class="num" id="cd-hours">--</div><div class="lbl">Hours</div></div>
-    <div class="unit"><div class="num" id="cd-mins">--</div><div class="lbl">Min</div></div>
-    <div class="unit"><div class="num" id="cd-secs">--</div><div class="lbl">Sec</div></div>
+
+    <div class="unit">
+      <div class="num" id="cd-days">--</div>
+      <div class="lbl">Days</div>
+    </div>
+
+    <div class="unit">
+      <div class="num" id="cd-hours">--</div>
+      <div class="lbl">Hours</div>
+    </div>
+
+    <div class="unit">
+      <div class="num" id="cd-mins">--</div>
+      <div class="lbl">Min</div>
+    </div>
+
+    <div class="unit">
+      <div class="num" id="cd-secs">--</div>
+      <div class="lbl">Sec</div>
+    </div>
+
   </div>
 
   <span class="scroll-cue">Scroll ↓</span>
+
 </section>
+
 
 <!-- GUEST QUOTE -->
+
 <section class="guest-quote reveal">
+
   <span class="quote-mark">&ldquo;</span>
-  <p class="quote-text">You are special to us, and we warmly invite you to share in our joy.</p>
+
+  <p class="quote-text">
+    You are special to us, and we warmly invite you to share in our joy.
+  </p>
+
 </section>
+
 
 <!-- EVENTS -->
+
 <section id="events">
+
   <div class="section-head reveal">
+
     <span class="eyebrow">Join Us</span>
+
     <h2>The Celebrations</h2>
+
     <div class="sprig-row">
-      <svg viewBox="0 0 60 24" fill="none" stroke="var(--sage)" stroke-width="2"><path d="M2 12 C 18 2, 34 2, 46 12 C 34 8, 18 8, 2 12 Z"/><path d="M2 12 C 18 22, 34 22, 46 12 C 34 16, 18 16, 2 12 Z"/><line x1="2" y1="12" x2="52" y2="12"/></svg>
-      <svg class="r" viewBox="0 0 60 24" fill="none" stroke="var(--sage)" stroke-width="2"><path d="M2 12 C 18 2, 34 2, 46 12 C 34 8, 18 8, 2 12 Z"/><path d="M2 12 C 18 22, 34 22, 46 12 C 34 16, 18 16, 2 12 Z"/><line x1="2" y1="12" x2="52" y2="12"/></svg>
+
+      <svg
+        viewBox="0 0 60 24"
+        fill="none"
+        stroke="var(--sage)"
+        stroke-width="2"
+      >
+        <path d="M2 12 C 18 2, 34 2, 46 12 C 34 8, 18 8, 2 12 Z"/>
+        <path d="M2 12 C 18 22, 34 22, 46 12 C 34 16, 18 16, 2 12 Z"/>
+        <line x1="2" y1="12" x2="52" y2="12"/>
+      </svg>
+
+      <svg
+        class="r"
+        viewBox="0 0 60 24"
+        fill="none"
+        stroke="var(--sage)"
+        stroke-width="2"
+      >
+        <path d="M2 12 C 18 2, 34 2, 46 12 C 34 8, 18 8, 2 12 Z"/>
+        <path d="M2 12 C 18 22, 34 22, 46 12 C 34 16, 18 16, 2 12 Z"/>
+        <line x1="2" y1="12" x2="52" y2="12"/>
+      </svg>
+
     </div>
+
   </div>
+
 
   <div class="events">
-    <div class="event-card reveal">
-      <div class="kind">Engagement</div>
-      <div class="date-big">17</div>
-      <div class="date-sub">August 2026 · 11:30 AM</div>
-      <div class="venue-name">St. Sebastian's Church</div>
-      <div class="venue-addr">Porur, Wayanad</div>
-      <a class="map-btn" href="https://maps.app.goo.gl/PkZEAnVwv7rWwYEb9?g_st=ic" target="_blank" rel="noopener">Open In Maps</a>
-    </div>
 
     <div class="event-card reveal">
-      <div class="kind">Wedding</div>
-      <div class="date-big">19</div>
-      <div class="date-sub">August 2026 · 10:30 AM</div>
-      <div class="venue-name">St. Sebastian's Syro‑Malabar Forane Church</div>
-      <div class="venue-addr">Nellikkampoyil, Kannur</div>
-      <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=St.+Sebastian%27s+Syro-Malabar+Forane+Church+Nellikkampoyil+Ulikkal+Kannur+Kerala+670705" target="_blank" rel="noopener">Open In Maps</a>
-      <div class="countdown-mini" id="countdown-wedding">
-        <div class="unit"><div class="num" id="wcd-days">--</div><div class="lbl">Days</div></div>
-        <div class="unit"><div class="num" id="wcd-hours">--</div><div class="lbl">Hours</div></div>
-        <div class="unit"><div class="num" id="wcd-mins">--</div><div class="lbl">Min</div></div>
-        <div class="unit"><div class="num" id="wcd-secs">--</div><div class="lbl">Sec</div></div>
+
+      <div class="kind">Engagement</div>
+
+      <div class="date-big">17</div>
+
+      <div class="date-sub">
+        August 2026 · 11:30 AM
       </div>
+
+      <div class="venue-name">
+        St. Sebastian's Church
+      </div>
+
+      <div class="venue-addr">
+        Porur, Wayanad
+      </div>
+
+      <a
+        class="map-btn"
+        href="https://maps.app.goo.gl/PkZEAnVwv7rWwYEb9?g_st=ic"
+        target="_blank"
+        rel="noopener"
+      >
+        Open In Maps
+      </a>
+
     </div>
+
+
+    <div class="event-card reveal">
+
+      <div class="kind">Wedding</div>
+
+      <div class="date-big">19</div>
+
+      <div class="date-sub">
+        August 2026 · 10:30 AM
+      </div>
+
+      <div class="venue-name">
+        St. Sebastian's Syro-Malabar Forane Church
+      </div>
+
+      <div class="venue-addr">
+        Nellikkampoyil, Kannur
+      </div>
+
+      <a
+        class="map-btn"
+        href="https://www.google.com/maps/search/?api=1&query=St.+Sebastian%27s+Syro-Malabar+Forane+Church+Nellikkampoyil+Ulikkal+Kannur+Kerala+670705"
+        target="_blank"
+        rel="noopener"
+      >
+        Open In Maps
+      </a>
+
+      <div class="countdown-mini" id="countdown-wedding">
+
+        <div class="unit">
+          <div class="num" id="wcd-days">--</div>
+          <div class="lbl">Days</div>
+        </div>
+
+        <div class="unit">
+          <div class="num" id="wcd-hours">--</div>
+          <div class="lbl">Hours</div>
+        </div>
+
+        <div class="unit">
+          <div class="num" id="wcd-mins">--</div>
+          <div class="lbl">Min</div>
+        </div>
+
+        <div class="unit">
+          <div class="num" id="wcd-secs">--</div>
+          <div class="lbl">Sec</div>
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
+
 </section>
 
+
 <!-- MUSIC -->
+
 <section class="music">
+
   <div class="section-head reveal">
+
     <span class="eyebrow">Set The Mood</span>
+
     <h2>Add Your Song</h2>
+
     <div class="sprig-row">
-      <svg viewBox="0 0 60 24" fill="none" stroke="var(--sage)" stroke-width="2"><path d="M2 12 C 18 2, 34 2, 46 12 C 34 8, 18 8, 2 12 Z"/><path d="M2 12 C 18 22, 34 22, 46 12 C 34 16, 18 16, 2 12 Z"/><line x1="2" y1="12" x2="52" y2="12"/></svg>
-      <svg class="r" viewBox="0 0 60 24" fill="none" stroke="var(--sage)" stroke-width="2"><path d="M2 12 C 18 2, 34 2, 46 12 C 34 8, 18 8, 2 12 Z"/><path d="M2 12 C 18 22, 34 22, 46 12 C 34 16, 18 16, 2 12 Z"/><line x1="2" y1="12" x2="52" y2="12"/></svg>
+
+      <svg
+        viewBox="0 0 60 24"
+        fill="none"
+        stroke="var(--sage)"
+        stroke-width="2"
+      >
+        <path d="M2 12 C 18 2, 34 2, 46 12 C 34 8, 18 8, 2 12 Z"/>
+        <path d="M2 12 C 18 22, 34 22, 46 12 C 34 16, 18 16, 2 12 Z"/>
+        <line x1="2" y1="12" x2="52" y2="12"/>
+      </svg>
+
+      <svg
+        class="r"
+        viewBox="0 0 60 24"
+        fill="none"
+        stroke="var(--sage)"
+        stroke-width="2"
+      >
+        <path d="M2 12 C 18 2, 34 2, 46 12 C 34 8, 18 8, 2 12 Z"/>
+        <path d="M2 12 C 18 22, 34 22, 46 12 C 34 16, 18 16, 2 12 Z"/>
+        <line x1="2" y1="12" x2="52" y2="12"/>
+      </svg>
+
     </div>
+
   </div>
-  <p class="reveal">We're building the celebration playlist together — add a song you love, one that reminds you of Amal &amp; Jomol, or one that'll get you on the dance floor.</p>
-  <a class="music-btn reveal" href="https://music.apple.com/in/playlist/her/pl.u-Ymb0vq5CgJ9kmbe" target="_blank" rel="noopener">
+
+
+  <p class="reveal">
+    We're building the celebration playlist together — add a song you love,
+    one that reminds you of Amal &amp; Jomol, or one that'll get you on the dance floor.
+  </p>
+
+
+  <a
+    class="music-btn reveal"
+    href="https://music.apple.com/in/playlist/her/pl.u-Ymb0vq5CgJ9kmbe"
+    target="_blank"
+    rel="noopener"
+  >
+
     <span class="note-icon">
-      <svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M18.5 2c-.2 0-.4 0-.6.05L9.1 3.8c-.6.12-1.1.62-1.1 1.34v10.4c-.5-.2-1-.3-1.6-.3-1.8 0-3.4 1.2-3.4 2.9S4.6 21 6.4 21s3.4-1.2 3.4-2.9V9.1l7-1.4v6.9c-.5-.2-1-.3-1.6-.3-1.8 0-3.4 1.2-3.4 2.9S13.4 21 15.2 21s3.4-1.2 3.4-2.9V3.4c0-.8-.65-1.4-1.4-1.4z"/></svg>
+
+      <svg
+        viewBox="0 0 24 24"
+        fill="#fff"
+        aria-hidden="true"
+      >
+        <path d="M18.5 2c-.2 0-.4 0-.6.05L9.1 3.8c-.6.12-1.1.62-1.1 1.34v10.4c-.5-.2-1-.3-1.6-.3-1.8 0-3.4 1.2-3.4 2.9S4.6 21 6.4 21s3.4-1.2 3.4-2.9V9.1l7-1.4v6.9c-.5-.2-1-.3-1.6-.3-1.8 0-3.4 1.2-3.4 2.9S13.4 21 15.2 21s3.4-1.2 3.4-2.9V3.4c0-.8-.65-1.4-1.4-1.4z"/>
+      </svg>
+
     </span>
+
     <span class="btn-label">
       <span>Add A Song</span>
       <span class="small">On Apple Music</span>
     </span>
+
   </a>
-  <div class="music-caption reveal">Tap To Open The Shared Playlist And Add Your Track</div>
+
+  <div class="music-caption reveal">
+    Tap To Open The Shared Playlist And Add Your Track
+  </div>
+
 </section>
+
 
 <!-- GALLERY -->
+
 <section id="gallery">
+
   <div class="section-head reveal">
+
     <span class="eyebrow">A Few Favorites</span>
+
     <h2>Our Gallery</h2>
+
     <div class="sprig-row">
-      <svg viewBox="0 0 60 24" fill="none" stroke="var(--sage)" stroke-width="2"><path d="M2 12 C 18 2, 34 2, 46 12 C 34 8, 18 8, 2 12 Z"/><path d="M2 12 C 18 22, 34 22, 46 12 C 34 16, 18 16, 2 12 Z"/><line x1="2" y1="12" x2="52" y2="12"/></svg>
-      <svg class="r" viewBox="0 0 60 24" fill="none" stroke="var(--sage)" stroke-width="2"><path d="M2 12 C 18 2, 34 2, 46 12 C 34 8, 18 8, 2 12 Z"/><path d="M2 12 C 18 22, 34 22, 46 12 C 34 16, 18 16, 2 12 Z"/><line x1="2" y1="12" x2="52" y2="12"/></svg>
+
+      <svg
+        viewBox="0 0 60 24"
+        fill="none"
+        stroke="var(--sage)"
+        stroke-width="2"
+      >
+        <path d="M2 12 C 18 2, 34 2, 46 12 C 34 8, 18 8, 2 12 Z"/>
+        <path d="M2 12 C 18 22, 34 22, 46 12 C 34 16, 18 16, 2 12 Z"/>
+        <line x1="2" y1="12" x2="52" y2="12"/>
+      </svg>
+
+      <svg
+        class="r"
+        viewBox="0 0 60 24"
+        fill="none"
+        stroke="var(--sage)"
+        stroke-width="2"
+      >
+        <path d="M2 12 C 18 2, 34 2, 46 12 C 34 8, 18 8, 2 12 Z"/>
+        <path d="M2 12 C 18 22, 34 22, 46 12 C 34 16, 18 16, 2 12 Z"/>
+        <line x1="2" y1="12" x2="52" y2="12"/>
+      </svg>
+
     </div>
+
   </div>
+
 
   <div class="closing-caption reveal">
-    <p>Here's to forever, and everything after.</p>
-    <a class="gallery-btn" href="https://share.icloud.com/photos/0a8rNGeH6HzQcLudq19NmGMRA" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5" fill="currentColor" stroke="none"/><path d="M21 16l-5.5-5.5L9 17"/></svg>
+
+    <p>
+      Here's to forever, and everything after.
+    </p>
+
+    <a
+      class="gallery-btn"
+      href="https://share.icloud.com/photos/0a8rNGeH6HzQcLudq19NmGMRA"
+      target="_blank"
+      rel="noopener"
+    >
+
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+      >
+        <rect x="3" y="5" width="18" height="14" rx="2"/>
+        <circle
+          cx="8.5"
+          cy="10"
+          r="1.5"
+          fill="currentColor"
+          stroke="none"
+        />
+        <path d="M21 16l-5.5-5.5L9 17"/>
+      </svg>
+
       View Full Album &amp; Add Yours
+
     </a>
+
   </div>
+
 </section>
 
+
+<!-- FOOTER -->
+
 <footer>
+
   <div class="heart-glyph">
-    <svg viewBox="0 0 100 100" fill="none" stroke="var(--gold)" stroke-width="4"><path d="M50 82 C20 60, 8 40, 22 24 C32 12, 48 16, 50 32 C52 16, 68 12, 78 24 C92 40, 80 60, 50 82 Z"/></svg>
+
+    <svg
+      viewBox="0 0 100 100"
+      fill="none"
+      stroke="var(--gold)"
+      stroke-width="4"
+    >
+      <path d="M50 82 C20 60, 8 40, 22 24 C32 12, 48 16, 50 32 C52 16, 68 12, 78 24 C92 40, 80 60, 50 82 Z"/>
+    </svg>
+
   </div>
-  <p>With Love, Jobin Joseph Araykkal</p>
+
+  <p>
+    With Love, Jobin Joseph Araykkal
+  </p>
+
 </footer>
 
+
 <script>
+
   // Dynamic Falling Leaves Script
-  const leavesContainer = document.getElementById('falling-leaves-container');
-  const leafPath = "M2 12 C 18 2, 34 2, 46 12 C 34 8, 18 8, 2 12 Z M2 12 C 18 22, 34 22, 46 12 C 34 16, 18 16, 2 12 Z";
-  
-  function createLeaf() {
-    const leaf = document.createElement('div');
+
+  const leavesContainer =
+    document.getElementById('falling-leaves-container');
+
+  const leafPath =
+    "M2 12 C 18 2, 34 2, 46 12 C 34 8, 18 8, 2 12 Z M2 12 C 18 22, 34 22, 46 12 C 34 16, 18 16, 2 12 Z";
+
+
+  function createLeaf(){
+
+    const leaf =
+      document.createElement('div');
+
     leaf.classList.add('leaf-anim');
-    
-    // Randomize position, duration, and delay for natural feeling
-    leaf.style.left = (Math.random() * 100) + 'vw';
-    const fallDuration = (Math.random() * 8 + 12); // Between 12s and 20s
-    const swayDuration = (Math.random() * 3 + 2.5); // Between 2.5s and 5.5s
-    leaf.style.animationDuration = `${fallDuration}s, ${swayDuration}s`;
-    
+
+
+    // Randomize position, duration, and delay
+
+    leaf.style.left =
+      (Math.random() * 100) + 'vw';
+
+    const fallDuration =
+      (Math.random() * 8 + 12);
+
+    const swayDuration =
+      (Math.random() * 3 + 2.5);
+
+    leaf.style.animationDuration =
+      `${fallDuration}s, ${swayDuration}s`;
+
+
     // Slight size variations
-    const size = (Math.random() * 15 + 15);
-    leaf.style.width = size + 'px';
-    leaf.style.height = (size * 0.4) + 'px'; // Maintain roughly proportional height
-    
+
+    const size =
+      (Math.random() * 15 + 15);
+
+    leaf.style.width =
+      size + 'px';
+
+    leaf.style.height =
+      (size * 0.4) + 'px';
+
+
     // Inject the inline SVG
-    leaf.innerHTML = `<svg viewBox="0 0 60 24" fill="none" stroke="var(--sage-light)" stroke-width="1.5" style="width:100%; height:100%; display:block;"><path d="${leafPath}"/><line x1="2" y1="12" x2="52" y2="12" stroke="var(--sage-light)" stroke-width="1.5"/></svg>`;
-    
+
+    leaf.innerHTML = `
+      <svg
+        viewBox="0 0 60 24"
+        fill="none"
+        stroke="var(--sage-light)"
+        stroke-width="1.5"
+        style="width:100%; height:100%; display:block;"
+      >
+        <path d="${leafPath}"/>
+        <line
+          x1="2"
+          y1="12"
+          x2="52"
+          y2="12"
+          stroke="var(--sage-light)"
+          stroke-width="1.5"
+        />
+      </svg>
+    `;
+
+
     leavesContainer.appendChild(leaf);
-    
-    // Remove leaf after it finishes falling to keep DOM clean
+
+
+    // Remove leaf after it finishes falling
+
     setTimeout(() => {
       leaf.remove();
     }, fallDuration * 1000);
+
   }
+
 
   // Create a new leaf periodically
+
   setInterval(createLeaf, 1800);
-  
-  // Create a few initial leaves immediately so screen isn't empty
-  for(let i=0; i<5; i++) {
-    setTimeout(createLeaf, i * 400);
+
+
+  // Create initial leaves
+
+  for(let i = 0; i < 5; i++){
+
+    setTimeout(
+      createLeaf,
+      i * 400
+    );
+
   }
 
-  // Countdown to the Engagement — 17 August 2026, 11:30 AM IST
-  var engagementTarget = new Date("2026-08-17T11:30:00+05:30").getTime();
-  // Countdown to the Wedding — 19 August 2026, 10:30 AM IST
-  var weddingTarget = new Date("2026-08-19T10:30:00+05:30").getTime();
+
+  // Countdown to Engagement
+  // 17 August 2026, 11:30 AM IST
+
+  var engagementTarget =
+    new Date(
+      "2026-08-17T11:30:00+05:30"
+    ).getTime();
+
+
+  // Countdown to Wedding
+  // 19 August 2026, 10:30 AM IST
+
+  var weddingTarget =
+    new Date(
+      "2026-08-19T10:30:00+05:30"
+    ).getTime();
+
 
   function diffParts(target){
-    var now = new Date().getTime();
-    var diff = target - now;
-    if(diff < 0) diff = 0;
+
+    var now =
+      new Date().getTime();
+
+    var diff =
+      target - now;
+
+    if(diff < 0){
+      diff = 0;
+    }
+
     return {
-      d: Math.floor(diff / (1000*60*60*24)),
-      h: Math.floor((diff % (1000*60*60*24)) / (1000*60*60)),
-      m: Math.floor((diff % (1000*60*60)) / (1000*60)),
-      s: Math.floor((diff % (1000*60)) / 1000)
+
+      d:
+        Math.floor(
+          diff / (1000 * 60 * 60 * 24)
+        ),
+
+      h:
+        Math.floor(
+          (diff % (1000 * 60 * 60 * 24))
+          / (1000 * 60 * 60)
+        ),
+
+      m:
+        Math.floor(
+          (diff % (1000 * 60 * 60))
+          / (1000 * 60)
+        ),
+
+      s:
+        Math.floor(
+          (diff % (1000 * 60))
+          / 1000
+        )
+
     };
+
   }
+
 
   function updateCountdown(){
-    var e = diffParts(engagementTarget);
-    document.getElementById('cd-days').textContent = e.d;
-    document.getElementById('cd-hours').textContent = String(e.h).padStart(2,'0');
-    document.getElementById('cd-mins').textContent = String(e.m).padStart(2,'0');
-    document.getElementById('cd-secs').textContent = String(e.s).padStart(2,'0');
 
-    var w = diffParts(weddingTarget);
-    document.getElementById('wcd-days').textContent = w.d;
-    document.getElementById('wcd-hours').textContent = String(w.h).padStart(2,'0');
-    document.getElementById('wcd-mins').textContent = String(w.m).padStart(2,'0');
-    document.getElementById('wcd-secs').textContent = String(w.s).padStart(2,'0');
+    var e =
+      diffParts(engagementTarget);
+
+    document.getElementById('cd-days').textContent =
+      e.d;
+
+    document.getElementById('cd-hours').textContent =
+      String(e.h).padStart(2,'0');
+
+    document.getElementById('cd-mins').textContent =
+      String(e.m).padStart(2,'0');
+
+    document.getElementById('cd-secs').textContent =
+      String(e.s).padStart(2,'0');
+
+
+    var w =
+      diffParts(weddingTarget);
+
+    document.getElementById('wcd-days').textContent =
+      w.d;
+
+    document.getElementById('wcd-hours').textContent =
+      String(w.h).padStart(2,'0');
+
+    document.getElementById('wcd-mins').textContent =
+      String(w.m).padStart(2,'0');
+
+    document.getElementById('wcd-secs').textContent =
+      String(w.s).padStart(2,'0');
+
   }
+
+
   updateCountdown();
-  setInterval(updateCountdown, 1000);
+
+  setInterval(
+    updateCountdown,
+    1000
+  );
+
 
   // Scroll reveal
-  var observer = new IntersectionObserver(function(entries){
-    entries.forEach(function(entry){
-      if(entry.isIntersecting){
-        entry.target.classList.add('in');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {threshold: 0.15});
 
-  document.querySelectorAll('.reveal').forEach(function(el){
-    observer.observe(el);
-  });
+  var observer =
+    new IntersectionObserver(
+      function(entries){
+
+        entries.forEach(function(entry){
+
+          if(entry.isIntersecting){
+
+            entry.target.classList.add('in');
+
+            observer.unobserve(entry.target);
+
+          }
+
+        });
+
+      },
+      {
+        threshold:0.15
+      }
+    );
+
+
+  document
+    .querySelectorAll('.reveal')
+    .forEach(function(el){
+
+      observer.observe(el);
+
+    });
+
 </script>
 
 </body>
