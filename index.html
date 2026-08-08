@@ -52,35 +52,6 @@
       radial-gradient(circle at 85% 80%, rgba(123,38,53,0.05), transparent 45%);
   }
 
-  /* ---------- faded photo backdrops ---------- */
-  .photo-backdrop{
-    position:absolute; inset:0; z-index:-1; pointer-events:none;
-    background-repeat:no-repeat;
-    background-position:center;
-    background-size:cover;
-  }
-  .hero{ position:relative; overflow:hidden; }
-  .hero .photo-backdrop{
-    background-image:
-      linear-gradient(180deg, rgba(250,246,237,0.72) 0%, rgba(250,246,237,0.90) 55%, var(--cream) 100%),
-      url('photos/DSC08567-web.jpg');
-    opacity:0.9;
-  }
-  .music{ position:relative; overflow:hidden; }
-  .music .photo-backdrop{
-    background-image:
-      linear-gradient(180deg, var(--cream) 0%, rgba(250,246,237,0.85) 20%, rgba(250,246,237,0.85) 80%, var(--cream) 100%),
-      url('photos/DSC08221-web.jpg');
-    opacity:0.85;
-  }
-  .guest-quote{ position:relative; overflow:hidden; }
-  .guest-quote .photo-backdrop{
-    background-image:
-      linear-gradient(180deg, var(--cream) 0%, rgba(250,246,237,0.82) 25%, rgba(250,246,237,0.82) 75%, var(--cream) 100%),
-      url('photos/DSC08390-web.jpg');
-    opacity:0.8;
-  }
-
   /* ---------- hero ---------- */
   .hero{
     min-height:100svh;
@@ -239,27 +210,7 @@
     text-transform:uppercase;
     color:var(--maroon);
   }
-  .venue-photo{
-    width:100%;
-    aspect-ratio:4/3;
-    overflow:hidden;
-    margin-top:1.1rem;
-    border:2px solid var(--blue-light);
-    box-shadow:0 0 0 5px var(--cream), 0 0 0 6px rgba(94,122,156,0.35);
-    position:relative;
-  }
-  .venue-photo img{
-    width:100%; height:100%;
-    object-fit:cover;
-    display:block;
-    filter:saturate(1.03);
-  }
-  .venue-photo::after{
-    content:'';
-    position:absolute; inset:0;
-    background:linear-gradient(180deg, transparent 55%, rgba(243,237,223,0.9) 100%);
-    pointer-events:none;
-  }
+
 
   /* ---------- guest quote ---------- */
   .guest-quote{
@@ -377,6 +328,25 @@
   }
 
   /* ---------- gallery ---------- */
+  .gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:1rem;
+    margin-bottom:3rem;
+  }
+  @media (max-width:640px){ .gallery-grid{grid-template-columns:1fr;} }
+  .gallery-item{
+    aspect-ratio:4/5;
+    overflow:hidden;
+    border:2px solid var(--blue-light);
+    box-shadow:0 0 0 5px var(--cream), 0 0 0 6px rgba(94,122,156,0.35);
+  }
+  .gallery-item img{
+    width:100%; height:100%;
+    object-fit:cover;
+    display:block;
+    filter:saturate(1.03);
+  }
   .gallery-btn{
     display:inline-flex;
     align-items:center;
@@ -395,22 +365,10 @@
   .gallery-btn:hover{background:#4a4436; transform:translateY(-2px);}
   .gallery-btn svg{width:18px;height:18px;flex-shrink:0;}
 
-  /* ---------- closing photo ---------- */
-  .closing-photo{
-    padding:0;
-    max-width:100%;
-    position:relative;
-  }
-  .closing-photo img{
-    width:100%;
-    display:block;
-    max-height:70vh;
-    object-fit:cover;
-    filter:saturate(1.02);
-  }
+  /* ---------- closing caption ---------- */
   .closing-caption{
     text-align:center;
-    padding:2.4rem 6vw 1rem;
+    padding:0 6vw;
   }
   .closing-caption p{
     font-family:'Cormorant Garamond', serif;
@@ -443,7 +401,6 @@
 
 <!-- HERO -->
 <section class="hero" style="min-height:100svh;">
-  <div class="photo-backdrop"></div>
   <span class="eyebrow">Save the Date</span>
   <h1 class="names">Amal &amp; Jomol</h1>
   <div class="heart-glyph">
@@ -496,7 +453,6 @@
       <div class="date-sub">August 2026 · 11:00 AM</div>
       <div class="venue-name">St. Sebastian's Church</div>
       <div class="venue-addr">Porur, Wayanad</div>
-      <div class="venue-photo"><img src="photos/IMG_4202-web.jpg" alt="St. Sebastian's Church, Porur, Wayanad" loading="lazy"></div>
       <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=St.+Sebastian%27s+Church+Porur+Wayanad" target="_blank" rel="noopener">Open in Maps</a>
     </div>
 
@@ -506,7 +462,6 @@
       <div class="date-sub">August 2026</div>
       <div class="venue-name">St. Sebastian's Syro‑Malabar Forane Church</div>
       <div class="venue-addr">Nellikkampoyi, Kannur</div>
-      <div class="venue-photo"><img src="photos/IMG_4204-web.jpg" alt="St. Sebastian's Syro-Malabar Forane Church, Nellikkampoyi, Kannur — aerial view" loading="lazy"></div>
       <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=St.+Sebastian%27s+Syro-Malabar+Forane+Church+Nellikkampoyil+Ulikkal+Kannur+Kerala+670705" target="_blank" rel="noopener">Open in Maps</a>
     </div>
   </div>
@@ -514,7 +469,6 @@
 
 <!-- MUSIC -->
 <section class="music">
-  <div class="photo-backdrop"></div>
   <div class="section-head reveal">
     <span class="eyebrow">Set the Mood</span>
     <h2>Add Your Song</h2>
@@ -536,13 +490,31 @@
   <div class="music-caption reveal">Tap to open the shared playlist and add your track</div>
 </section>
 
-<!-- CLOSING PHOTO -->
-<section class="closing-photo reveal">
-  <img src="photos/DSC08390-web.jpg" alt="Amal and Jomol by the infinity pool">
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="section-head reveal">
+    <span class="eyebrow">A Few Favorites</span>
+    <h2>Our Gallery</h2>
+    <div class="sprig-row">
+      <svg viewBox="0 0 60 24" fill="none" stroke="#5B6B4A" stroke-width="2"><path d="M2 12 C 18 2, 34 2, 46 12 C 34 8, 18 8, 2 12 Z"/><path d="M2 12 C 18 22, 34 22, 46 12 C 34 16, 18 16, 2 12 Z"/><line x1="2" y1="12" x2="52" y2="12"/></svg>
+      <svg class="r" viewBox="0 0 60 24" fill="none" stroke="#5B6B4A" stroke-width="2"><path d="M2 12 C 18 2, 34 2, 46 12 C 34 8, 18 8, 2 12 Z"/><path d="M2 12 C 18 22, 34 22, 46 12 C 34 16, 18 16, 2 12 Z"/><line x1="2" y1="12" x2="52" y2="12"/></svg>
+    </div>
+  </div>
+
+  <div class="gallery-grid reveal">
+    <div class="gallery-item"><img src="photos/DSC08221-web.jpg" alt="Amal and Jomol walking together" loading="lazy"></div>
+    <div class="gallery-item"><img src="photos/DSC08567-web.jpg" alt="Amal and Jomol by the sea" loading="lazy"></div>
+    <div class="gallery-item"><img src="photos/DSC08390-web.jpg" alt="Amal and Jomol by the infinity pool" loading="lazy"></div>
+  </div>
+
+  <div class="closing-caption reveal">
+    <p>Here's to forever, and everything after.</p>
+    <a class="gallery-btn" href="https://share.icloud.com/photos/045BH1I9V12qbMay1FWswt40w" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5" fill="currentColor" stroke="none"/><path d="M21 16l-5.5-5.5L9 17"/></svg>
+      View Full Album &amp; Add Yours
+    </a>
+  </div>
 </section>
-<div class="closing-caption reveal">
-  <p>Here's to forever, and everything after.</p>
-</div>
 
 <footer>
   <div class="heart-glyph">
